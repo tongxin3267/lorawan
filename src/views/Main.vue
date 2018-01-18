@@ -53,7 +53,7 @@
                                 </a>
                                 <DropdownMenu slot="list">
                                     <DropdownItem name="ownSpace">{{ $t('userCenter') }}</DropdownItem>
-                                    <DropdownItem name="loginout" divided>{{ $t('signOut') }}</DropdownItem>
+                                    <DropdownItem name="loginout">{{ $t('signOut') }}</DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
                             <!--<Avatar :src="avatorPath" style="background: #619fe7;margin-left: 10px;"></Avatar>-->
