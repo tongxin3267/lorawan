@@ -28,7 +28,7 @@
                         <Table border :columns="columns" :data="data" @on-selection-change="selectData"></Table>
                         <div style="margin: 10px;overflow: hidden">
                             <div style="float: right;">
-                                <Page :total="counts" show-total :page-size="pageSize" @on-change="nextPage"></Page>
+                                <Page :total="counts" show-total show-elevator :page-size="pageSize" @on-change="nextPage"></Page>
                             </div>
                         </div>
                     </Row>
