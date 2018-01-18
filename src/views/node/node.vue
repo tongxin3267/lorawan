@@ -217,6 +217,7 @@ export default {
                 appEUI: '0000000000000001',
                 appKey: '98929b92f09e2daf676d646d0f61d250',
                 authCode: '',
+                applicationID: '0',
                 isClassC: false,
                 relaxFCnt: true,
                 isABP: true,
@@ -391,6 +392,8 @@ export default {
                     list[i].isClassC = list[i].isClassC == 1 ? true : false;
                     list[i].isABP = list[i].isABP == 1 ? true : false;
                     list[i].relaxFCnt = list[i].relaxFCnt == 1 ? true : false;
+                    list[i].applicationID = list[i].applicationID ? list[i].applicationID : '0';
+                    list[i].sensorID = [];
                 }
 
                 let info = {
@@ -444,6 +447,7 @@ export default {
                     "authCode",
                     "appEUI",
                     "appKey",
+                    "applicationID",
                     "isClassC",
                     "relaxFCnt",
                     "isABP",
@@ -467,6 +471,7 @@ export default {
                         'strings',
                         d[i].appEUI,
                         d[i].appKey,
+                        '0',
                         0,
                         1,
                         1,
