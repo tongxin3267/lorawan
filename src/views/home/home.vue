@@ -61,8 +61,8 @@ export default {
     data () {
         return {
             count: {
-                createUser: 496,
-                visit: 3264,
+                createUser: 0,
+                visit: 0,
                 collection: 24389305,
                 transfer: 39503498
             }

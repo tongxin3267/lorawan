@@ -25,7 +25,7 @@
                         </div>
                     </Row>
                     <Row class="margin-top-10 searchable-table-con1">
-                        <Table border :columns="columns" :data="data" @on-selection-change="selectData"></Table>
+                        <Table border :columns="columns" :data="data" :loading="loading" @on-selection-change="selectData"></Table>
                         <div style="margin: 10px;overflow: hidden">
                             <div style="float: right;">
                                 <Page :total="counts" show-total show-elevator :page-size="pageSize" @on-change="nextPage"></Page>
@@ -256,6 +256,7 @@ export default {
             },
             searchConName: '',
             searchConEui: '',
+            loading: true,
             columns: [
                 {
                     type: 'selection',
@@ -340,13 +341,13 @@ export default {
     methods: {
         init () {
             nodeModel.lists({offset:this.offset, limit:this.pageSize}).then(result => {
-                this.loading = false;
                 for (const i in result.result) {
                     result.result[i].time = util.getDateDiff(result.result[i].timestamp)
                 }
                 this.data = this.initTable = result.result;
                 this.counts = parseInt(result.totalCount);
             }).catch(err => console.log(err))
+            this.loading = false;
         },
         search (data, argumentObj) {
             let res = data;
