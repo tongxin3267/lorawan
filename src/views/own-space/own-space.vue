@@ -23,7 +23,7 @@
                     </FormItem>
                     <FormItem :label="$t('license') + '：'" prop="license">
                         <div style="display:inline-block;width:300px;">
-                            <Input v-model="userForm.license" ></Input>
+                            <Input v-model="userForm.license" type='textarea' :autosize="{minRows: 3,maxRows: 5}"></Input>
                         </div>
                     </FormItem>
                     <div>

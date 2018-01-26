@@ -13,11 +13,12 @@ util.title = function (title) {
     window.document.title = title;
 };
 
-const ajaxUrl = env === 'development'
-    ? 'http://192.168.1.155:18000/api/v1/'
-    : env === 'production'
-        ? 'http://192.168.1.155:18000/api/v1/'
-        : 'http://192.168.1.155:18000/api/v1/';
+const ajaxUrl =
+  env === "development"
+    ? "http://192.168.199.100:18000/api/v1/"
+    : env === "production"
+      ? "http://127.0.0.1:18000/api/v1/"
+      : "http://127.0.0.1:18000/api/v1/";
 
 let ajax = axios.create({
     baseURL: ajaxUrl,
